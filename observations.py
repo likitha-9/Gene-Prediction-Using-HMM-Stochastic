@@ -15,7 +15,7 @@ for index, line in enumerate(file.readlines()):
                         obs.append(i)
 
 #remove extraneous ones
-extra = ['Xaa', '', '*', '\n', '\t']
+extra = ['Xaa', '', '\n', '\t']
 for i in extra:
       while i in obs:
             obs.remove(i)

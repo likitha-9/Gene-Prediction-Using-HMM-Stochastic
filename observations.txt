@@ -1,3 +1,4 @@
+*
 Ala
 Arg
 Asn
