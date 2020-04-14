@@ -12,5 +12,4 @@ O = observation sequence
 
 T - N/A
 
-
 """
