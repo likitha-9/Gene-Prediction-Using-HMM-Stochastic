@@ -9,4 +9,8 @@ A = state transition probabilities
 B = observation probability matrix
 pi = initial state distribution
 O = observation sequence
+
+T - N/A
+
+
 """
