@@ -19,7 +19,7 @@ for i in obs.readlines():
       pairings[i[:-1]] = []   #the slicing is to remove any immediate delimiter (following the name)
 
 count=0
-while True:
+while count!=250:
       try:
             line1 = train.readline().split(" ") #DNA codons
             line2 = train.readline().split(" ") #amino acids
@@ -36,7 +36,7 @@ while True:
                   except:
                         break
             count+=1
-            print(count)
+            #print(count)
       except:
             break
 print(pairings)
