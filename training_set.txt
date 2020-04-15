@@ -688,5 +688,5 @@ Phe Gln Phe Ala Tyr Gly Gln Arg Gln Asp Leu Cys Thr Arg Gln Pro Leu Gly Pro Leu
 CCA AAA AAA GAG CAA ACA CCA TTC ACT CAC TCA TGT TAG ATA AAC ACT GAG TGA AGT CAC     23760
 Pro Lys Lys Glu Gln Thr Pro Phe Thr His Ser Cys  *  Ile Asn Thr Glu  *  Ser His 
 
-TGG AGC CCA AGG ACT GTG CGA GGT CAG CAC TGC CAA TAC AAG AAG CTG CAG CCC TCC AGC     23820
+TGG AGC CCA AGG ACT GTG CGA GGT CAG CAC TGC CAA TAC
 Trp Ser Pro Arg Thr Val Arg Gly Gln His Cys Gln Tyr
