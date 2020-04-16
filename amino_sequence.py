@@ -10,12 +10,19 @@ def compile_amino_sequence():
       index=0
       for line in file.readlines():
             if index%3==1:
-                  print(index)
                   split = line.split(" ")
                   amino += split
             index+=1
-      cleanup(amino)
+      amino = cleanup(amino)
+      return amino
 
-amino = compile_amino_sequence()
-                  
+def cleanup(amino):
+      while '' in amino:
+            amino.remove('')
+      while '\n' in amino:
+            amino.remove('\n')
+      while 'Xaa' in amino:
+            amino.remove('Xaa')     #DNA codon: NNN
+      return amino
       
+amino = compile_amino_sequence()
