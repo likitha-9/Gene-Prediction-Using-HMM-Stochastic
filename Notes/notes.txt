@@ -11,3 +11,10 @@ Questions ---->
 --- How to determine which particular sequence falls under a certain chromosome?
 --- So far, all data is from homosapiens. Try perhaps other organisms' DNAs? But might need massive computing power (??)
 
+=============================================================================
+
+Issues:
+1. Scalability
+--- severe underflow errors (due to multiplication of multiple probabilities (state transitions)
+tackle by taking logs or scaling, account for loss of precision
+--- large datasets are impossible to compute (some sequences are >248M in length)
