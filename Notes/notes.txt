@@ -1,0 +1,13 @@
+Human DNA:
+prediction for unplaced scaffolds
+
+States: list of amino acids (observations.py)
+Hidden ones: A, C, G, T
+Goal: predict which homosapien chromosome each unplaced scaffold belongs to
+
+Deadline: ~April 29, 2020
+
+Questions ----> 
+--- How to determine which particular sequence falls under a certain chromosome?
+--- So far, all data is from homosapiens. Try perhaps other organisms' DNAs? But might need massive computing power (??)
+
