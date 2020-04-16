@@ -10,6 +10,14 @@ B = observation probability matrix
 pi = initial state distribution
 O = observation sequence
 
-T - N/A
-
+T - (multiple)
+N - list of amino acids - observations.py (??)
+M -
+Q -
+V - chrosomes in homosapiens (1-23)
+A - computed from the initial matrix
+B -
+pi - computed from the initial matrix (??)
+O - (multiple)
 """
+
