@@ -18,3 +18,5 @@ Issues:
 --- severe underflow errors (due to multiplication of multiple probabilities (state transitions)
 tackle by taking logs or scaling, account for loss of precision
 --- large datasets are impossible to compute (some sequences are >248M in length)
+
+2. Map amino acid ---> DNA codon. (See which amino acid constitutes of which DNA codons)
