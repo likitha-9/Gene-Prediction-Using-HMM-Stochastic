@@ -20,3 +20,11 @@ tackle by taking logs or scaling, account for loss of precision
 --- large datasets are impossible to compute (some sequences are >248M in length)
 
 2. Map amino acid ---> DNA codon. (See which amino acid constitutes of which DNA codons)
+
+3. Sequence of amino acid - initial state of probabilities
+
+4. Stop codon (*) - significance...??
+
+5. Use sequence test sets mentioned in the progress report
+
+6. Test these sequences first: all 23 chromosomes, sequence length: ~1K - 10K
