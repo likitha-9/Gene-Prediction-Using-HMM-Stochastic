@@ -35,4 +35,4 @@ tackle by taking logs or scaling, account for loss of precision
 
 9. BW algo
 
-10. 
+10. How to measure performance?? 
