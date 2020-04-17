@@ -29,4 +29,7 @@ tackle by taking logs or scaling, account for loss of precision
 
 6. Test these sequences first: all 23 chromosomes, sequence length: ~1K - 10K
 
-7. Viterbi - could be potentially expensive
+7. Viterbi - could be potentially expensive, computing wise and storage wise
+
+8. Forward algo
+
