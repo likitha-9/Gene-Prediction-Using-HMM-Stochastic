@@ -12,7 +12,7 @@ O = observation sequence
 
 T - (multiple)
 N - list of amino acids - observations.py (??)
-M -
+M - 
 Q - all states from N (??)
 V - chrosomes in homosapiens (1-23)
 A - computed from the initial matrix
