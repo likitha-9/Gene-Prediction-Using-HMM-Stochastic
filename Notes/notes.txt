@@ -28,3 +28,5 @@ tackle by taking logs or scaling, account for loss of precision
 5. Use sequence test sets mentioned in the progress report
 
 6. Test these sequences first: all 23 chromosomes, sequence length: ~1K - 10K
+
+7. Viterbi - could be potentially expensive
