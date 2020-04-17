@@ -34,3 +34,5 @@ tackle by taking logs or scaling, account for loss of precision
 8. Forward algo
 
 9. BW algo
+
+10. 
