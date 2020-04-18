@@ -12,11 +12,11 @@ def create_dictionary(sequence):
                   keys.append(i)
       print(keys)
       diction = {}
-      for key in sorted(keys):
-            if key not in diction:
-                  diction[key] = {}
-                  for j in sorted(keys):
-                        diction[key][j]=0
+      for key in sorted(keys):      #for every key in the list of amino acids
+            if key not in diction:        #if key isn't already present in dictionary
+                  diction[key] = {}             #then create a key in dictionary
+                  for j in sorted(keys):              #then iterate over the list of keys and
+                        diction[key][j]=0             #set {key: {k1:0, k2:0,...kN:0}}, where kN is the Nth key in keys
       return diction
 
 def compute_probabilities(diction,amino):
