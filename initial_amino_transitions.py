@@ -14,7 +14,9 @@ def probs(sequence):
       diction = {}
       for key in sorted(keys):
             if key not in diction:
-                  diction[key] = 
+                  diction[key] = {}
+                  diction[key] = { diction[key][j]:0 for j in sorted(keys) }
+      print(diction)
 
 def compute_probabilities(diction):
       pass      
