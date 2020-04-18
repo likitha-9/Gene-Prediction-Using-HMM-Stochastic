@@ -16,7 +16,7 @@ M - 21 (number of unique amino acids, including Stop Codon (*)) - check observat
 Q - {A, C, G, T}
 V - {*, Ala, Arg, Asn, Asp, Cys, Gln, Glu, Gly, His, Ile, Leu, Lys, Met, Phe, Pro, Ser, Thr, Trp, Tyr, Val}
 A - import from the file initial_dna_transitions.py
-B -
+B - 
 pi - computed from the initial matrix (??)
 O - (multiple)
 
