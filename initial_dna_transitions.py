@@ -37,7 +37,7 @@ def compute_probabilities(diction):
             count = 0
             for each_value in diction[key]:
                   count += each_value
-                  
+            
       
 dna = initial_dna_sequence.compile_dna_sequence()
 diction = probs(dna)    #dictionary of probabilities
