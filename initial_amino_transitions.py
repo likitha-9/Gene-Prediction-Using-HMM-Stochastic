@@ -5,7 +5,7 @@ NxN matrix:
 
 import initial_amino_sequence 
 
-def probs(sequence):
+def create_dictionary(sequence):
       keys = []
       for i in sequence:
             if i not in keys:
@@ -15,14 +15,16 @@ def probs(sequence):
       for key in sorted(keys):
             if key not in diction:
                   diction[key] = {}
-                  diction[key] = { diction[key][j]:0 for j in sorted(keys) }
-      print(diction)
+                  print("#")
+                  for j in sorted(keys):
+                        diction[key][j]=0
+      return diction
 
 def compute_probabilities(diction):
       pass      
 
 amino = initial_amino_sequence.compile_amino_sequence() #list of tokens
 
-diction = probs(amino)    #dictionary of probabilities
+diction = create_dictionary(amino)    #dictionary of probabilities
 transition_probs = compute_probabilities(diction)
 print(transition_probs)
