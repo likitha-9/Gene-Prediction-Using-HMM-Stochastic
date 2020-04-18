@@ -46,6 +46,19 @@ diction = probs(dna)    #dictionary of probabilities
 transition_probs = compute_probabilities(diction)
 print(transition_probs)
 
+"""
+Initial transition probabilities (after computation)
+4x4 matrix:
+
+	      	A      	      	      	      C      	      	      	G	      	      	      	T
+A	0.239710240368785      	    0.24234441883437602      	0.37141916364833716      	0.1465261771485018
+
+C	-	-	-	-
+
+G	-	-	-	-
+
+T	-	-	-	-
+"""
 
       
 
