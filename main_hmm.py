@@ -11,13 +11,15 @@ pi = initial state distribution
 O = observation sequence
 
 T - (multiple)
-N - list of amino acids - observations.py (??)
-M - 
-Q - all states from N (??)
-V - chrosomes in homosapiens (1-23)
-A - computed from the initial matrix
+N - 4 (number of hidden states)
+M - 21 (number of unique amino acids, including Stop Codon (*)) - check observations.txt 
+Q - {A, C, G, T}
+V - {*, Ala, Arg, Asn, Asp, Cys, Gln, Glu, Gly, His, Ile, Leu, Lys, Met, Phe, Pro, Ser, Thr, Trp, Tyr, Val}
+A - import from the file initial_dna_transitions.py
 B -
 pi - computed from the initial matrix (??)
 O - (multiple)
+
+HIDDEN STATES - A, C, G, T
 """
 
