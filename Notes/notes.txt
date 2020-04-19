@@ -36,3 +36,6 @@ tackle by taking logs or scaling, account for loss of precision
 9. BW algo
 
 10. How to measure performance?? 
+
+============================================================================
+**If a transition from A to B doesn't exist, it's not because it really doesn't exist. It's because the probability from A to B is negligible enough to not consider.**
