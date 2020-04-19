@@ -21,7 +21,26 @@ for i in hidden:
       for state in sorted(obs):
             diction[i][state]=0
       
-def compute_emissions(diction,amino):
+def compute_emissions(diction,dna,amino):
+      dna = [dna[i:i+3] for i in range(0,len(dna),3)]
+      dna.remove('\n')        #dump '\n'                 
+      print(amino)
+      print(dna)
+
+      #this loop returns only counts
+      for i in range(len(amino)):
+            diction[dna[i][0].lower()][amino[i]] += 1  #dna[i][0].lower() --> returns one of the hidden states; [amino[i]] --> returns corresponding acid
+
+      #this loop returns probabilities
+      for i in diction:
+            count = 0
+            for j in diction[i]:
+                  count += diction[i][j]
+            for j in diction[i]:
+                  diction[i][j] /= count
+      
+      return diction
+
       """for i in range(0,len(amino)-1):
             try:
                   \"""
@@ -41,6 +60,6 @@ def compute_emissions(diction,amino):
       return diction"""
 
 
-emissions = compute_emissions(diction,amino)
+emissions = compute_emissions(diction,dna,amino)
       
             
