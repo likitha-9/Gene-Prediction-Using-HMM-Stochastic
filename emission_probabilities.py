@@ -12,6 +12,7 @@ file = open("./observations.txt",'r')
 obs = []
 for line in file.readlines():
       obs.append(line[:-1])   #'\n' not needed
+file.close()
 
 diction = {}
 for i in hidden:
@@ -20,13 +21,13 @@ for i in hidden:
             diction[i][state]=0
       
 def compute_emissions(diction,amino):
-      for i in range(0,len(amino)-1):
+      """for i in range(0,len(amino)-1):
             try:
-                  """
+                  \"""
                   ********************************************************
                                   EDIT THE BELOW STATEMENT.
                   ********************************************************
-                  """
+                  \"""
                   diction[amino[i][0].lower()][amino[i+1]] += 1  #computed counts
             except:
                   pass
@@ -36,7 +37,7 @@ def compute_emissions(diction,amino):
                   count += diction[i][j]
             for j in diction[i]:
                   diction[i][j] /= count
-      return diction
+      return diction"""
 
 emissions = compute_emissions(diction,amino)
       
