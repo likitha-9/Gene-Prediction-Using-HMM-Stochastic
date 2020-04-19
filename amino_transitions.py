@@ -1,6 +1,6 @@
 """
-Initial transition probabilities
-NxN matrix:
+Initial amino acid transition probabilities:
+NxN matrix
 """
 
 import initial_amino_sequence 
@@ -19,13 +19,17 @@ def create_dictionary(sequence):
                         diction[key][j]=0             #set {key: {k1:0, k2:0,...kN:0}}, where kN is the Nth key in keys
       return diction
 
+def fill_dictionary(diction,amino):
+      
+      
 def compute_probabilities(diction,amino):
       for i in range:
-            
-      pass      
+            pass      
 
 amino = initial_amino_sequence.compile_amino_sequence() #list of tokens
 
-diction = create_dictionary(amino)    #dictionary of probabilities
-transition_probs = compute_probabilities(diction,amino)
-print(transition_probs)
+diction = create_dictionary(amino)    #empty dictionary
+fill = fill_dictionary(diction,amino)     #filled dictionary
+
+#transition_probs = compute_probabilities(diction,amino)    #dictionary of probabilities
+#print(transition_probs)
