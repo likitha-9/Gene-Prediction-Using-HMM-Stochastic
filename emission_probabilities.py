@@ -3,8 +3,9 @@ Initial Emission Probabilities
 
 Transitions from hidden states to observations (amino acids)
 """
-import initial_amino_sequence
+import initial_amino_sequence, initial_dna_sequence
 amino = initial_amino_sequence.amino
+dna = initial_dna_sequence.dna
 
 hidden = ["a","c","g","t"]
 
@@ -38,6 +39,7 @@ def compute_emissions(diction,amino):
             for j in diction[i]:
                   diction[i][j] /= count
       return diction"""
+
 
 emissions = compute_emissions(diction,amino)
       
