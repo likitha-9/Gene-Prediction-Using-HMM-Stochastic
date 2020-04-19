@@ -12,7 +12,3 @@ file = open("./observations.txt",'r')
 obs = []
 for line in file.readlines():
       obs.append(line[:-1])   #'\n' not needed
-print(obs)
-
-#file = open("./observations.txt","r")
-#amino 
