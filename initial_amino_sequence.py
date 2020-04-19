@@ -13,6 +13,7 @@ def compile_amino_sequence():
                   split = line.split(" ")
                   amino += split
             index+=1
+      print(amino)
       amino = cleanup(amino)
       return amino
 
