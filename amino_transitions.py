@@ -20,16 +20,23 @@ def create_dictionary(sequence):
       return diction
 
 def fill_dictionary(diction,amino):
+      for i in range(0,len(amino)-1):
+            diction[amino[i]][amino[i+1]] += 1
+      return diction            
       
-      
-def compute_probabilities(diction,amino):
-      for i in range:
-            pass      
+def compute_probabilities(fill,amino):
+      for i in fill:
+            count=0
+            for j in fill[i]:
+                  count += fill[i][j]     #count the number of transitions per amino acid
+            for j in fill[i]: 
+                  fill[i][j] /= count     #compute the probability
+      return fill
+            
 
 amino = initial_amino_sequence.compile_amino_sequence() #list of tokens
 
 diction = create_dictionary(amino)    #empty dictionary
 fill = fill_dictionary(diction,amino)     #filled dictionary
-
-#transition_probs = compute_probabilities(diction,amino)    #dictionary of probabilities
-#print(transition_probs)
+transitions = compute_probabilities(fill,amino)   #dictionary of probabilities
+print(transitions)
