@@ -21,7 +21,15 @@ for i in hidden:
       
 def compute_emissions(diction,amino):
       for i in range(0,len(amino)-1):
-            diction[amino[i][0].lower()][amino[i+1]] += 1  #computed counts
+            try:
+                  """
+                  ********************************************************
+                                  EDIT THE BELOW STATEMENT.
+                  ********************************************************
+                  """
+                  diction[amino[i][0].lower()][amino[i+1]] += 1  #computed counts
+            except:
+                  pass
       for i in diction:
             count=0
             for j in diction[i]:
