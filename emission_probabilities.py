@@ -9,7 +9,7 @@ dna = initial_dna_sequence.dna
 
 hidden = ["a","c","g","t"]
 
-file = open("./observations.txt",'r')
+file = open("./data/observations.txt",'r')
 obs = []
 for line in file.readlines():
       obs.append(line[:-1])   #'\n' not needed
