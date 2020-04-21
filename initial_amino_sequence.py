@@ -6,7 +6,7 @@ import os
 
 def compile_amino_sequence():
       amino = []
-      file = open("./training_set.txt", "r")
+      file = open("./data/training_set.txt", "r")
       index=0
       for line in file.readlines():
             if index%3==1:
