@@ -24,3 +24,5 @@ HIDDEN STATES - Q - [A, C, G, T]
 OBSERVATION STATES  - V - [*, Ala, Arg, Asn, Asp, Cys, Gln, Glu, Gly, His, Ile, Leu, Lys, Met, Phe, Pro, Ser, Thr, Trp, Tyr, Val]
 """
 
+
+
