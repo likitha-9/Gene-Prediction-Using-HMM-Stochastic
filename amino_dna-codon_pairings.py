@@ -6,7 +6,7 @@ import os
 
 #open needed files
 obs = open("./observations.txt", "r")
-train = open("./training_set.txt", "r")
+train = open("./data/training_set.txt", "r")
 
 pairings = {}
 
