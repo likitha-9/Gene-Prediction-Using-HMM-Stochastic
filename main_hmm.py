@@ -24,5 +24,11 @@ HIDDEN STATES - Q - [A, C, G, T]
 OBSERVATION STATES  - V - [*, Ala, Arg, Asn, Asp, Cys, Gln, Glu, Gly, His, Ile, Leu, Lys, Met, Phe, Pro, Ser, Thr, Trp, Tyr, Val]
 """
 
+# file imports
+import emission_transitions as emissions, hidden_state_probabilities as transitions
+# library imports
+import numpy as np, matplotlib.pyplot as plt
+
+
 
 
