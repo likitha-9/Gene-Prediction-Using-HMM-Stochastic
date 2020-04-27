@@ -26,9 +26,11 @@ OBSERVATION STATES  - V - [*, Ala, Arg, Asn, Asp, Cys, Gln, Glu, Gly, His, Ile, 
 
 #program imports
 import emission_probabilities as emissions, hidden_state_transitions as hidden
+
 #data imports
 import data_genomes as genomes, data_scaffolds as unplaced
-#library imports
+
+#scientific library imports
 import numpy as np, matplotlib.pyplot as plt
 
 
