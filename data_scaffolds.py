@@ -21,3 +21,8 @@ for i in range(0,len(data)):
     for j in range(1,len(data[i])):
         string += data[i][j]
     data[i] = [ data[i][0], string ]
+
+#file.close()
+
+file2 = open("./data_scaffolds.txt", "w")
+file2.write(str(data))
