@@ -17,6 +17,12 @@ for i in data:
     for j in i:
         if len(j)>0:
             clean[-1].append(j)
-        element = ''
-        for k in clean[-1][2:-2]:
-            element += k    # combining the strings togeter
+    element = ''
+    for k in clean[-1][2:-2]:
+        element += k    # combining the strings (i.e., genome sequences that are split) together
+    the_last_two_elems = clean[-1][-2:]
+
+    #recreating the list
+    clean[-1] = clean[-1][:2]
+    clean[-1].append(element)
+    clean[-1].append(the_last_two_elems)
