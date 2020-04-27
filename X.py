@@ -298,6 +298,17 @@ if __name__ == '__main__':
     emissions = np.array(list_emissions)
     transitions = np.array(list_transitions)
     
+    obs = ['Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Gln', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Asn', 'Pro', 'Lys', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', 'Gln', 'Pro', 'Gln', 'Pro', 'Gln', 'Pro', 'Gln', 'Pro', 'Gln', 'Pro', 'Gln', 'Pro', '*', 'Pro', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Thr', 'Leu', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', 'Leu', 'Thr', 'Pro', 'Asn', 'Pro', 'Asn', 'Pro', 'Asn', 'Pro', 'Asn', 'Pro', 'Asn', 'Pro', 'Asn', 'Pro', 'Asn', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', '*', 'Pro', 'Ser', 'Arg', 'Tyr', 'Pro', 'Gln', 'Pro', 'Ala', 'Arg', 'Pro', 'Pro', 'Gly', 'Ser', 'Asp', 'Leu', 'Arg', 'Arg', 'Thr']
+    model2 = HMM(transitions, emissions)
+    model2.train(obs)
+    print("Model transmission probabilities:\n{}".format(model2.transmission_prob))
+    print("Model emission probabilities:\n{}".format(model2.emission_prob))
+    # Probability of a new sequence
+    new_seq = ['Thr', 'Leu', 'Thr', '*']
+    print("Finding likelihood for {}".format(new_seq))
+    likelihood = model2.likelihood(new_seq)
+    print("Likelihood: {}".format(likelihood))
+
     # Example inputs from Jason Eisner's Ice Cream and Baltimore Summer example
     # http://www.cs.jhu.edu/~jason/papers/#eisner-2002-tnlp
     emission = np.array([[0.7, 0], [0.2, 0.3], [0.1, 0.7]])
