@@ -245,6 +245,59 @@ class HMM():
         return sum(new_hmm.forward_final)
 
 if __name__ == '__main__':
+    
+
+    """
+    Constructing an HMM:
+    T = length of observation sequence
+    N = number of states in the model
+    M = number of observation symbols
+    Q = distinct states of the Markov process
+    V = set of possible observations
+    A = state transition probabilities
+    B = observation probability matrix
+    pi = initial state distribution
+    O = observation sequence
+
+    T - (multiple)
+    N - 4 (number of hidden states)
+    M - 21 (number of unique amino acids, including Stop Codon (*)) - check observations.txt 
+    Q - [A, C, G, T]
+    V - import from the file ./data/observations.txt - [*, Ala, Arg, Asn, Asp, Cys, Gln, Glu, Gly, His, Ile, Leu, Lys, Met, Phe, Pro, Ser, Thr, Trp, Tyr, Val]
+    A - import from the file hidden_state_transitions.py
+    B - import from the file emission_probabilities.py
+    pi - start --> [0.25, 0.25, 0.25, 0.25]
+    O - (multiple)
+
+    HIDDEN STATES - Q - [A, C, G, T]
+    OBSERVATION STATES  - V - [*, Ala, Arg, Asn, Asp, Cys, Gln, Glu, Gly, His, Ile, Leu, Lys, Met, Phe, Pro, Ser, Thr, Trp, Tyr, Val]
+    """
+
+    #program imports
+    import emission_probabilities as emissions, hidden_state_transitions as hidden
+
+    #data imports
+    import data_genomes as genomes, data_scaffolds as unplaced
+
+    #scientific library imports
+    import numpy as np, pandas as pd, matplotlib.pyplot as plt
+
+    # np.array (emissions & transitions)
+    list_emissions = []
+    for key in emissions.emissions:
+        list_emissions.append([])
+        for i in emissions.emissions[key]:
+            list_emissions[-1].append(emissions.emissions[key][i])
+        
+    list_transitions = []
+    for key in hidden.transitions:
+        list_transitions.append([])
+        for i in hidden.transitions[key]:
+            list_transitions[-1].append(hidden.transitions[key][i])
+
+    emissions = np.array(list_emissions)
+    transitions = np.array(list_transitions)
+    
     # Example inputs from Jason Eisner's Ice Cream and Baltimore Summer example
     # http://www.cs.jhu.edu/~jason/papers/#eisner-2002-tnlp
     emission = np.array([[0.7, 0], [0.2, 0.3], [0.1, 0.7]])
