@@ -27,15 +27,7 @@ OBSERVATION STATES  - V - [*, Ala, Arg, Asn, Asp, Cys, Gln, Glu, Gly, His, Ile, 
 #program imports
 import emission_probabilities as emissions, hidden_state_transitions as hidden
 #data imports
-import importlib.util
-genome_data_import = importlib.util.spec_from_file_location("genome_data.py", "./data")
-genomes = importlib.util.module_from_spec(genome_data_import)
-genome_data_import.loader.exec_module(genomes)
-
-scaffold_data_import = importlib.util.spec_from_file_location("unplaced_data.py", "./data")
-scaffolds = importlib.util.module_from_spec(scaffolds_data_import)
-scaffold_data_import.loader.exec_module(scaffolds)
-
+import data_genomes as genomes, data_scaffolds as unplaced
 #library imports
 import numpy as np, matplotlib.pyplot as plt
 
