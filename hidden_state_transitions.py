@@ -43,8 +43,8 @@ def compute_probabilities(diction):
 
 dna = initial_dna_sequence.compile_dna_sequence()
 diction = probs(dna)    #dictionary of probabilities
-transition_probs = compute_probabilities(diction)
-print(transition_probs)
+transitions = compute_probabilities(diction)
+#print(transitions)
 
 """
 Initial transition probabilities (after computation)
