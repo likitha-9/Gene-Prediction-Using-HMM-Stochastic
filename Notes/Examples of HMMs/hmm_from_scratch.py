@@ -8,12 +8,9 @@ class ProbabilityVector:
         probs  = probabilities.values()
         
         assert len(states) == len(probs),"The probabilities must match the states."
-        assert len(states) == len(set(states)), 
-            "The states must be unique."
-        assert abs(sum(probs) - 1.0) < 1e-12, 
-            "Probabilities must sum up to 1."
-        assert len(list(filter(lambda x: 0 <= x <= 1, probs))) == len(probs), \
-            "Probabilities must be numbers from [0, 1] interval."
+        assert len(states) == len(set(states)),"The states must be unique."
+        assert abs(sum(probs) - 1.0) < 1e-12, "Probabilities must sum up to 1."
+        assert len(list(filter(lambda x: 0 <= x <= 1, probs))) == len(probs), "Probabilities must be numbers from [0, 1] interval."
         
         self.states = sorted(probabilities)
         self.values = np.array(list(map(lambda x: 
