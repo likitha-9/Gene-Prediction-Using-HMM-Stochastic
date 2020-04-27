@@ -5,8 +5,8 @@ A dictionary of {amino_acid: {list of DNA codons}}
 import os
 
 #open needed files
-obs = open("./observations.txt", "r")
-train = open("./training_set.txt", "r")
+obs = open("./data/observations.txt", "r")
+train = open("./data/training_set.txt", "r")
 
 pairings = {}
 

@@ -1,6 +1,6 @@
 import os
 
-file = open("./training_set.txt", "r")
+file = open("./data/training_set.txt", "r")
 
 #observations
 obs = []
@@ -25,7 +25,7 @@ file.close()
 print(sorted(obs))
 
 #store the observations into a file
-file = open("./observations.txt", "w")
+file = open("./data/observations.txt", "w")
 for i in sorted(obs):
       file.write(i+'\n')
 file.close()
