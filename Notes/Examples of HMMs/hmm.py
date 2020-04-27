@@ -1,4 +1,4 @@
-# Define HMM state list and observation list
+import simplehmm # Define HMM state list and observation list
 
 test_hmm_states = ['title', 'givenname', 'surname']
 test_hmm_observ = ['TI', 'GM', 'GF', 'SN', 'UN']
