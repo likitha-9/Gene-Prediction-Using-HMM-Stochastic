@@ -1,4 +1,3 @@
-import pandas as pd
 from csv import reader
 
 file = reader(open("./genome_sequences_from_22_X_Y_chromosomes.csv",'r'))
@@ -12,20 +11,23 @@ for row in file:
             data.append([])
 data[0]=data[0][5:]
 data=data[:-1]
-clean = []
+
+genomes = []
 
 for i in data:
-    clean.append([])
+    genomes.append([])
     for j in i:
         if len(j)>0:
-            clean[-1].append(j)
+            genomes[-1].append(j)
     element = ''
-    for k in clean[-1][2:-2]:
+    for k in genomes[-1][2:-2]:
         element += k    # combining the strings (i.e., genome sequences that are split) together
-    the_last_two_elems = clean[-1][-2:]
+    the_last_two_elems = genomes[-1][-2:]
 
     #recreating the list
-    clean[-1] = clean[-1][:2]
-    clean[-1].append(element)
-    clean[-1].append(the_last_two_elems[0])
-    clean[-1].append(the_last_two_elems[1])
+    genomes[-1] = genomes[-1][:2]
+    genomes[-1].append(element)
+    genomes[-1].append(the_last_two_elems[0])
+    genomes[-1].append(the_last_two_elems[1])
+
+    
