@@ -11,7 +11,9 @@ for row in file:
             data[-1].append(i)
             data.append([])
 data[0]=data[0][5:]
+data=data[:-1]
 clean = []
+
 for i in data:
     clean.append([])
     for j in i:
@@ -25,4 +27,5 @@ for i in data:
     #recreating the list
     clean[-1] = clean[-1][:2]
     clean[-1].append(element)
-    clean[-1].append(the_last_two_elems)
+    clean[-1].append(the_last_two_elems[0])
+    clean[-1].append(the_last_two_elems[1])
