@@ -30,4 +30,6 @@ for i in data:
     genomes[-1].append(the_last_two_elems[0])
     genomes[-1].append(the_last_two_elems[1])
 
-    
+file2 = open("./data_genomes.txt","w")
+for i in range(0,len(genomes)):
+    file2.write(str([genomes[i][1],genomes[i][2]]))
